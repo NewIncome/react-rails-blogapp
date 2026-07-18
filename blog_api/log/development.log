@@ -76,3 +76,53 @@ Migrating to CreatePosts (20260718000127)
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
   [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for pp */ ORDER BY "posts"."created_at" DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2026-07-17 19:21:19 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/techrules4ever/.local/share/mise/installs/ruby/3.3.11/lib/ruby/gems/3.3.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/techrules4ever/.local/share/mise/installs/ruby/3.3.11/lib/ruby/gems/3.3.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 367)
+Completed 200 OK in 468ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 167406)
+
+
+Started GET "/posts" for ::1 at 2026-07-17 19:21:26 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:10:in `index'
+Completed 200 OK in 60ms (Views: 27.6ms | ActiveRecord: 6.5ms | Allocations: 13550)
+
+
+Started GET "/favicon.ico" for ::1 at 2026-07-17 19:21:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/posts" for ::1 at 2026-07-17 19:23:40 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/posts_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1783)
+
+
+Started GET "/posts" for ::1 at 2026-07-17 19:29:55 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/posts" for ::1 at 2026-07-17 19:30:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/posts" for ::1 at 2026-07-17 19:30:58 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/posts" for ::1 at 2026-07-17 19:31:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/api/v1/posts" for ::1 at 2026-07-17 19:32:06 -0600
+Processing by Api::V1::PostsController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:10:in `index'
+Completed 200 OK in 65ms (Views: 26.4ms | ActiveRecord: 7.0ms | Allocations: 13595)
+
+

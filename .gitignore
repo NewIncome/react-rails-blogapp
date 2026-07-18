@@ -5,29 +5,29 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+/blog_api/.bundle
 
 # Ignore all environment files (except templates).
-/.env*
-!/.env*.erb
+/blog_api/.env*
+!/blog_api/.env*.erb
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+/blog_api/log/*
+/blog_api/tmp/*
+!/blog_api/log/.keep
+!/blog_api/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+/blog_api/tmp/pids/*
+!/blog_api/tmp/pids/
+!/blog_api/tmp/pids/.keep
 
 # Ignore storage (uploaded files in development and any SQLite databases).
-/storage/*
-!/storage/.keep
-/tmp/storage/*
-!/tmp/storage/
-!/tmp/storage/.keep
+/blog_api/storage/*
+!/blog_api/storage/.keep
+/blog_api/tmp/storage/*
+!/blog_api/tmp/storage/
+!/blog_api/tmp/storage/.keep
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+/blog_api/config/master.key
