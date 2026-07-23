@@ -182,3 +182,13 @@
     border-right-color: var(--border);
   }
 }
+
+/* ===========================
+   ----- Personal styles -----
+   ===========================*/
+.post-container {
+  margin: 30px auto;
+  padding: 10px 10px;
+  border: gray solid 1px;
+  width: 75vh;
+}
