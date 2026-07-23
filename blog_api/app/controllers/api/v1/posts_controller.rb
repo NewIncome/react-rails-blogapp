@@ -14,6 +14,7 @@ module Api
 
       # GET /posts/1
       def show
+        sleep 3  # to wait for 3 seconds before sending the response, to 'Loading' in the F.E.
         render json: @post
       end
 
