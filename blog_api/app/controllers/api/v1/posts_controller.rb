@@ -2,6 +2,7 @@
 
 module Api
   module V1
+    # Controller for managing posts in the API.
     class PostsController < ApplicationController
       before_action :set_post, only: %i[show update destroy]
 
@@ -23,7 +24,9 @@ module Api
         @post = Post.new(post_params)
 
         if @post.save
-          render json: @post, status: :created, location: @post
+          # render json: @post, status: :created, location: @post
+          # we cannot render @post because now we are in /api/v1/posts
+          render json: @post, status: :created, location: api_v1_post_url(@post)
         else
           render json: @post.errors, status: :unprocessable_entity
         end
