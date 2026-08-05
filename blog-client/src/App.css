@@ -186,9 +186,21 @@
 /* ===========================
    ----- Personal styles -----
    ===========================*/
-.post-container {
+.post-container, .post-show {
   margin: 30px auto;
   padding: 10px 10px;
   border: gray solid 1px;
   width: 75vh;
+}
+
+.post-show {
+  margin-top: 50px;
+  padding: 25px 10px;
+  border: gray solid 1px;
+  width: 60vh;
+
+  > a {
+    display: block;
+    margin-top: 35px;
+  }
 }
